@@ -140,6 +140,123 @@
     }
     .theme-panel-shot img { width: 100%; display: block; }
 
+    /* ── SSC TEAM SECTION ── */
+    .steps-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+      max-width: 840px; margin: 52px auto 0;
+    }
+    .step-card {
+      background: #fff; border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 18px; padding: 28px 24px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .step-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .step-label { font-size: 14px; font-weight: 600; margin-top: 16px; color: var(--ink); }
+    .step-sub { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+    /* pencil mockup */
+    .mock-bar {
+      background: #f5f1ed; border-radius: 10px; padding: 10px 12px;
+      display: flex; align-items: center; justify-content: flex-end; gap: 8px;
+    }
+    .mock-icon {
+      width: 34px; height: 34px; border-radius: 8px;
+      background: rgba(0,0,0,0.06);
+    }
+    .mock-icons-row { display: flex; gap: 6px; flex: 1; }
+    .mock-pencil {
+      width: 30px; height: 30px; border-radius: 7px;
+      background: rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0;
+      box-shadow: 0 0 0 2px var(--accent), 0 0 0 4px rgba(238,77,45,0.2);
+    }
+    /* search box mockup */
+    .mock-search-box {
+      background: #fff; border: 1.5px solid var(--accent);
+      border-radius: 10px; padding: 9px 14px;
+      font-size: 13px; font-weight: 500; color: var(--ink);
+      display: flex; align-items: center; gap: 4px;
+    }
+    .mock-cursor {
+      display: inline-block; width: 2px; height: 14px;
+      background: var(--accent); animation: blink 1.1s step-end infinite;
+      vertical-align: middle; margin-left: 1px;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    /* portal icons grid mockup */
+    .mock-portal-grid {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 12px;
+    }
+    .mock-portal-grid-row2 {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 8px;
+    }
+    .mock-badge {
+      border-radius: 8px; aspect-ratio: 1;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 9px; font-weight: 800; color: #fff; letter-spacing: 0.02em;
+    }
+    /* feedback box */
+    .feedback-box {
+      max-width: 540px; margin: 52px auto 0;
+      background: var(--accent-light); border-radius: 16px;
+      padding: 28px 32px; text-align: center;
+    }
+    .feedback-box p { font-size: 16px; color: var(--ink); line-height: 1.65; }
+    .feedback-box strong { color: var(--accent); }
+    .feedback-box a { color: var(--accent); font-weight: 600; text-underline-offset: 3px; }
+
+
+    /* portal preview mockup */
+    .portal-preview-wrap {
+      max-width: 700px; margin: 48px auto 0;
+      display: flex; align-items: flex-start; justify-content: center; gap: 20px;
+      flex-wrap: wrap;
+    }
+    .portal-preview-label {
+      font-size: 13px; color: var(--muted); text-align: center;
+      margin-top: 14px; letter-spacing: 0.02em;
+    }
+    .portal-preview-icon-col {
+      display: flex; flex-direction: column; align-items: center; gap: 6px; padding-top: 8px;
+    }
+    .portal-preview-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: #e0541e; color: #fff;
+      font-size: 13px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(224,84,30,0.35);
+    }
+    .portal-arrow { font-size: 22px; color: var(--muted); padding-top: 18px; }
+    .portal-mock-popup {
+      background: #fff; border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.14), 0 2px 8px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.07);
+      padding: 18px 18px 16px; min-width: 240px;
+    }
+    .popup-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 14px; }
+    .popup-env-tabs { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+    .popup-env-tab {
+      padding: 6px 14px; border-radius: 20px;
+      font-size: 12px; font-weight: 600;
+      border: 1.5px solid rgba(0,0,0,0.12); color: #555; background: #fff;
+    }
+    .popup-env-tab.active { background: #e0541e; border-color: #e0541e; color: #fff; }
+    .popup-market-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+    .popup-market-btn {
+      padding: 8px 4px; border-radius: 10px;
+      font-size: 12px; font-weight: 600; text-align: center;
+      background: #f5f1ed; color: var(--ink);
+    }
+    @media (max-width: 740px) {
+      .steps-grid { grid-template-columns: 1fr; max-width: 400px; }
+      .portal-arrow { display: none; }
+    }
+
     /* ── CTA ── */
     .cta-s {
       padding: 130px 24px 120px; text-align: center;
@@ -224,7 +341,109 @@
 </section>
 
 
-<!-- ③ Tab 管理 -->
+<!-- ③ SSC 专属 -->
+<section class="s s-alt">
+  <div class="inner" style="text-align:center;">
+    <div class="reveal">
+      <p class="eyebrow">SSC 专属功能</p>
+      <h2>内部系统<br>一步直达</h2>
+      <p class="desc" style="max-width:480px;margin:16px auto 0;">
+        StarTab 为 SSC 团队内置了快捷工作台入口——隐藏在搜索框里，输入一个关键词即可解锁。
+      </p>
+    </div>
+
+    <div class="steps-grid reveal">
+
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="mock-bar">
+          <div class="mock-icons-row">
+            <div class="mock-icon"></div>
+            <div class="mock-icon"></div>
+            <div class="mock-icon"></div>
+            <div class="mock-icon"></div>
+          </div>
+          <div class="mock-pencil">✏️</div>
+        </div>
+        <p class="step-label">点击铅笔图标</p>
+        <p class="step-sub">鼠标悬停在快捷图标栏右侧</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="mock-search-box">
+          ssc<span class="mock-cursor"></span>
+        </div>
+        <p class="step-label">搜索框输入 SSC</p>
+        <p class="step-sub">内部系统图标立刻出现</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="mock-portal-grid">
+          <div class="mock-badge" style="background:#ee4d2d;font-size:7px;letter-spacing:0">DMS</div>
+          <div class="mock-badge" style="background:#7c3aed;">★</div>
+          <div class="mock-badge" style="background:#e0541e;">SPX</div>
+          <div class="mock-badge" style="background:#2563eb;">WMS</div>
+          <div class="mock-badge" style="background:#0891b2;">SP</div>
+        </div>
+        <div class="mock-portal-grid-row2">
+          <div class="mock-badge" style="background:#4f46e5;">WA</div>
+          <div class="mock-badge" style="background:#0284c7;">OMS</div>
+          <div class="mock-badge" style="background:#7c3aed;">FNS</div>
+          <div class="mock-badge" style="background:#059669;">SLS</div>
+        </div>
+        <p class="step-label">选择你需要的系统</p>
+        <p class="step-sub">点击即添加到快捷图标栏</p>
+      </div>
+
+    </div>
+
+
+    <div class="portal-preview-wrap reveal">
+      <div class="portal-preview-icon-col">
+        <div class="portal-preview-icon">SPX</div>
+        <p class="portal-preview-label" style="font-size:11px;">点击图标</p>
+      </div>
+      <div class="portal-arrow">→</div>
+      <div>
+        <div class="portal-mock-popup">
+          <p class="popup-title">SPX</p>
+          <div class="popup-env-tabs">
+            <div class="popup-env-tab active">UAT</div>
+            <div class="popup-env-tab">Live</div>
+            <div class="popup-env-tab">Test</div>
+            <div class="popup-env-tab">Staging</div>
+          </div>
+          <div class="popup-market-grid">
+            <div class="popup-market-btn">SG</div>
+            <div class="popup-market-btn">ID</div>
+            <div class="popup-market-btn">MY</div>
+            <div class="popup-market-btn">PH</div>
+            <div class="popup-market-btn">TH</div>
+            <div class="popup-market-btn">VN</div>
+            <div class="popup-market-btn">TW</div>
+            <div class="popup-market-btn">BR</div>
+          </div>
+        </div>
+        <p class="portal-preview-label">选择环境 + 市场，直接跳转</p>
+      </div>
+    </div>
+
+    <div class="feedback-box reveal">
+      <p>有想加的系统，或者发现了什么问题？<br>
+      <strong>你的反馈直接决定下一个版本做什么。</strong><br>
+      在 Seatalk 上直接找我：<strong>lan.yang@shopee.com</strong></p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ④ Tab 管理 -->
 <section class="s s-dark">
   <div class="inner split flip reveal">
     <div>
@@ -242,7 +461,7 @@
 </section>
 
 
-<!-- ④ 主题 & 待办 -->
+<!-- ⑤ 主题 & 待办 -->
 <section class="s">
   <div class="inner">
     <div class="theme-cols reveal">
@@ -269,7 +488,7 @@
 </section>
 
 
-<!-- ⑤ CTA -->
+<!-- ⑥ CTA -->
 <section class="cta-s">
   <div class="reveal">
     <h2>下班前看看<br>工作了然于心</h2>
